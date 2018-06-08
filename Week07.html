@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="07stylesheet.css">
+    <script type = "text/javascript" src = "07functions.js"></script>
     <title>Week 07</title>
   </head>
   <body>
@@ -8,27 +10,27 @@
     <!-- NAME -->
     <form action="" id="nameForm">
  	  <div>
-          First Name: <input  size="10"/>
-          <span class="fName" style="color:red">Invalid age   </span>
-          Last Name: <input  size="10"/>
-          <span class="lName" style="color:red">Invalid age   </span>
+          First Name: <input  onInput="checkName(this.value, 'fName');" size="10"/>
+          <span class="fName" style="color:red">Invalid first name   </span>
+          Last Name: <input  onInput="checkName(this.value, 'lName');" size="10"/>
+          <span class="lName" style="color:red">Invalid last name   </span>
     </div>
     </form>
     
     <!-- ADDRESS -->
     <form action="" id="addressForm">
  	  <div>
-          Address: <input  size="10"/>
-          <span class="fName" style="color:red">Invalid age   </span>
+          Address: <input onInput="checkAddress(this.value, 'addressLine1');" size="10"/>
+          <span class="addressLine1" style="color:red">Invalid address  </span>
     </div>
     <div>
-          Line 2:<input  size="10"/>
-          <span class="lName" style="color:red">Invalid age   </span>
+          Line 2:<input  onInput="checkAddress(this.value, 'addressLine2');" size="10"/>
+          <span class="addressLine2" style="color:red">Invalid address </span>
     </div>
     <div>
-          State: <input  size="2"/>
+          State: <input  onInput="checkState(this.value, 'state');" size="2"/>
           <span class="state" style="color:red">Invalid state </span>
-          Zip code: <input size="10"/>
+          Zip code: <input onInput="checkZip(this.value, 'zip');" size="10"/>
           <span class="zip" style="color:red">Invalid zip code </span>
     </div>
     </form>
@@ -36,7 +38,7 @@
     <!-- PHONE -->
     <form action="" id="phone">
  	  <div>
-          Phone Number: <input  size="13"/>
+          Phone Number: <input  onInput="checkName(this.value, 'phoneNumber');" size="13"/>
           <span class="phoneNumber" style="color:red">Invalid phone number   </span>
     </div>
     </form>
@@ -48,45 +50,74 @@
         <th>Picture</th>
         <th>Price</th>
         <th>Click to purchase</th>
+      <span class="tableBody">
       <tr>
-        <th>Mr. Buttons</th>
+        <th><style="text-align:left">Mr. Buttons</th>
         <th><img id="image" src="https://i.imgur.com/WjgFMVH.jpg" alt="Mr Buttons" width="150" height="125"></th>
         <th>$35</th>
-        <th></th>
+        <th><input type="checkbox" name="buyMrButtons" value=35>Click here to purchase Mr. Buttons</th>
       <tr>
         <th>Spock</th>
         <th><img id="image" src="https://i.imgur.com/DFiTyGC.jpg" alt="Spock" width="150" height="125"></th>
         <th>$40</th>
-        <th></th>
+        <th><input type="checkbox" name="buyMrButtons" value=40>Click here to purchase Spock</th>
       <tr>
         <th>Calico Jack</th>
         <th><img id="image" src="https://i.imgur.com/CRxuamw.jpg" alt="Spock" width="150" height="125"></th>
         <th>$35</th>
-        <th></th>
+        <th><input type="checkbox" name="buyMrButtons" value=35>Click here to purchase Calico Jack</th>
       <tr>
         <th>Freddy Meowcury</th>
         <th><img id="image" src="https://i.imgur.com/Dh9t6Zp.jpg" alt="Spock" width="150" height="125"></th>
         <th>$70</th>
-        <th></th>
+        <th><input type="checkbox" name="buyMrButtons" value=70>Click here to purchase Freddy Meowcury</th>
       <tr>
         <th>Paul</th>
-        <th><img id="image" src=https://i.imgur.com/lcEy6Ov.jpg" alt="Spock" width="125" height="125"></th>
+        <th><img id="image" src="https://i.imgur.com/lcEy6Ov.jpg" alt="Spock" width="125" height="125"></th>
         <th>$4</th>
-        <th></th>
+        <th><input type="checkbox" name="buyMrButtons" value=4>Click here to purchase Paul</th>
       <tr>
-        <th>Forsnoth, the World Breaker</th>
+        <th>Astoroth, the World Breaker</th>
         <th><img id="image" src="https://i.imgur.com/gWLk3MD.jpg" alt="Spock" width="150" height="100"></th>
         <th>$100</th>
-        <th></th>
+        <th><input type="checkbox" name="buyMrButtons" value=100>Click here to purchase Astoroth, the World Breaker</th>
+      </span>
     </table>
     
     <!-- TOTAL -->
+    <form action="" id="Total">
+ 	  <div>
+          Subtotal: <span class="subTotal">$0</span>
+    </div>
+ 	  <div>
+          Tax: <span class="tax">$0</span>
+    </div>
+ 	  <div>
+          Total: <span class="grandTotal">$0</span>
+    </div>
+    </form>
     
     <!-- PAYMENT INFO -->
     <form action="" id="payment">
  	  <div>
-          Credit Card: <input  size="13"/>
+          Credit Card:<input onInput="checkName(this.value, 'fName');" size="13"/>
           <span class="cardNumber" style="color:red">Invalid credit card</span>
+          Exp. Date: <input size="7"/">
+          <span class="expDate" style="color:red">Invalid expiration date</span>
+    </div>
+ 	  <div>
+          Billing Address: <input onInput="checkName(this.value, 'fName');" size="10"/>
+          <span class="fName" style="color:red">Invalid age   </span>
+    </div>
+    <div>
+          Line 2:<input onInput="checkName(this.value, 'fName');" size="10"/>
+          <span class="lName" style="color:red">Invalid age   </span>
+    </div>
+    <div>
+          State: <input onInput="checkName(this.value, 'fName');" size="2"/>
+          <span class="state" style="color:red">Invalid state </span>
+          Zip code: <input size="10"/>
+          <span class="zip" style="color:red">Invalid zip code </span>
     </div>
     </form>
     
