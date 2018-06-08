@@ -55,3 +55,29 @@ function checkPhone(phone, theClass) {
   else
       document.getElementsByClassName(theClass)[0].style.visibility = 'visible';
 }
+
+/*********************************************
+* CHECKCARD
+*********************************************/
+function checkCard( cardNumber, theClass) {
+  if( !cardNumber.search(
+     /^((\s*\d{16}\s*)|(\s*\d{4}\s\d{4}\s\d{4}\s\d{4}\s*))$/)) {
+      document.getElementsByClassName(theClass)[0].style.visibility = 'hidden';    
+  }
+  else {
+      document.getElementsByClassName(theClass)[0].style.visibility = 'visible';    
+    }
+}
+
+/*********************************************
+* CHECKEXPDATE
+*********************************************/
+function checkExpDate( date, theClass) {
+  if( !date.search(
+  /^(\d|([1][0-2])?)\/?\s?(([1](([7][6-9]\d)|([7][5][3-9]))|([1][8-9]\d{2}))|[2](([1][0][0])|([0]\d{2})))$/)) {
+      document.getElementsByClassName(theClass)[0].style.visibility = 'hidden';    
+  }
+  else {
+      document.getElementsByClassName(theClass)[0].style.visibility = 'visible';    
+    }
+}

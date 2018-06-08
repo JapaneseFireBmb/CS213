@@ -100,24 +100,24 @@
     <!-- PAYMENT INFO -->
     <form action="" id="payment">
  	  <div>
-          Credit Card:<input onInput="checkName(this.value, 'fName');" size="13"/>
+          Credit Card:<input onInput="checCard(this.value, 'cardNumber');" size="13"/>
           <span class="cardNumber" style="color:red">Invalid credit card</span>
-          Exp. Date: <input size="7"/">
+          Exp. Date: <input onInput="checkExpDate(this.value, 'expDate');" size="7"/">
           <span class="expDate" style="color:red">Invalid expiration date</span>
     </div>
  	  <div>
-          Billing Address: <input onInput="checkName(this.value, 'fName');" size="10"/>
-          <span class="fName" style="color:red">Invalid age   </span>
+          Billing Address: <input onInput="checkAddress(this.value, 'bAddressLine1');" size="10"/>
+          <span class="bAddressLine1" style="color:red">Invalid age   </span>
     </div>
     <div>
-          Line 2:<input onInput="checkName(this.value, 'fName');" size="10"/>
-          <span class="lName" style="color:red">Invalid age   </span>
+          Line 2:<input onInput="checkAddress(this.value, 'bAddressLine2');" size="10"/>
+          <span class="bAddressLine2" style="color:red">Invalid age   </span>
     </div>
     <div>
-          State: <input onInput="checkName(this.value, 'fName');" size="2"/>
-          <span class="state" style="color:red">Invalid state </span>
-          Zip code: <input size="10"/>
-          <span class="zip" style="color:red">Invalid zip code </span>
+          State: <input onInput="checkState(this.value, 'bState');" size="2"/>
+          <span class="bState" style="color:red">Invalid state </span>
+          Zip code: <input onInput="checkZip(this.value, 'bZip');" size="10"/>
+          <span class="bZip" style="color:red">Invalid zip code </span>
     </div>
     </form>
     
