@@ -3,7 +3,7 @@
 **********************************************/
 function checkName(name, theClass) {
     if( !name.search(
-    (/^\s*([M][c]\s?)*[A-Z][a-z]*(\-[A-Z][a-z]*)\s*$/))){
+    (/^\s*(([M][c]\s?)?)([A-Z]?)([a-z]*)((\-[A-Z][a-z]*)?)\s*$/))){
       document.getElementsByClassName(theClass)[0].style.visibility = 'hidden';    
     }
   else
@@ -11,11 +11,11 @@ function checkName(name, theClass) {
 }
 
 /**********************************************
-* CHECKNAME
+* CHECKADDRESS
 **********************************************/
 function checkAddress(address, theClass) {
     if( !address.search(
-    (/^\s*\d*(\s*((\d(([t][h])|([s][t])|([n][d])|([r][d])))?\s*(([A-Z]?)[a-z]*)))\s*$/))) {
+    (/^\s*(\d*(\s*((\d(([t][h])|([s][t])|([n][d])|([r][d])))?\s*(([A-Z]?)[a-z]*))))*\s*$/))) {
       document.getElementsByClassName(theClass)[0].style.visibility = 'hidden';    
     }
   else
@@ -49,7 +49,7 @@ function checkZip(zip, theClass) {
 * CHECKPHONE
 **********************************************/
 function checkPhone(phone, theClass) {
-  if( !phone.search((/^\(?(\d{3})\)?\s?(\d{3})\-?\s?(\d{4})$/))) {
+  if( !phone.search((/^\(?(\d{3})\)?\-?\s?(\d{3})\-?\s?(\d{4})$/))) {
       document.getElementsByClassName(theClass)[0].style.visibility = 'hidden';    
     }
   else

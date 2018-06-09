@@ -38,7 +38,7 @@
     <!-- PHONE -->
     <form action="" id="phone">
  	  <div>
-          Phone Number: <input  onInput="checkName(this.value, 'phoneNumber');" size="13"/>
+          Phone Number: <input  onInput="checkPhone(this.value, 'phoneNumber');" size="13"/>
           <span class="phoneNumber" style="color:red">Invalid phone number   </span>
     </div>
     </form>
@@ -100,7 +100,7 @@
     <!-- PAYMENT INFO -->
     <form action="" id="payment">
  	  <div>
-          Credit Card:<input onInput="checCard(this.value, 'cardNumber');" size="13"/>
+          Credit Card:<input onInput="checkCard(this.value, 'cardNumber');" size="13"/>
           <span class="cardNumber" style="color:red">Invalid credit card</span>
           Exp. Date: <input onInput="checkExpDate(this.value, 'expDate');" size="7"/">
           <span class="expDate" style="color:red">Invalid expiration date</span>
